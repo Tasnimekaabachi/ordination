@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GCANDIDAT</class>
+ <widget class="QMainWindow" name="GCANDIDAT">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1161</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GCANDIDAT</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget#centralwidget {
+    background-color: transparent;
+}
+QGroupBox {
+    background-color: rgba(40, 44, 52, 120);
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    border: 1px solid rgba(255, 255, 255, 70);
+}
+QTableWidget {
+    background-color: rgba(40, 44, 52, 100);
+    border-radius: 10px;
+    color: white;
+    gridline-color: rgba(255, 255, 255, 30);
+    selection-background-color: rgba(61, 174, 233, 100);
+}
+QTableWidget::item {
+    padding: 5px;
+}
+QScrollArea {
+    background-color: transparent;
+    border: none;
+}
+QWidget#scrollAreaWidgetContents {
+    background-color: transparent;
+}
+QLabel {
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    background-color: transparent;
+}
+QLineEdit, QDateEdit, QComboBox {
+    background-color: rgba(255, 255, 255, 15);
+    border: 1px solid rgba(255, 255, 255, 40);
+    border-radius: 7px;
+    padding: 5px;
+    color: white;
+    font-size: 11px;
+}
+QLineEdit:focus, QDateEdit:focus, QComboBox:focus {
+    border: 1px solid rgba(61, 174, 233, 150);
+    background-color: rgba(255, 255, 255, 20);
+}
+QRadioButton {
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    spacing: 5px;
+    background-color: transparent;
+}
+QRadioButton::indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 70);
+}
+QRadioButton::indicator:checked {
+    background-color: rgba(61, 174, 233, 150);
+    border: 1px solid rgba(61, 174, 233, 150);
+}
+QPushButton {
+    background-color: rgba(61, 174, 233, 150);
+    color: white;
+    border-radius: 7px;
+    padding: 8px;
+    min-width: 100px;
+    font-weight: bold;
+    font-size: 11px;
+    border: none;
+}
+QPushButton:hover {
+    background-color: rgba(61, 174, 233, 180);
+}
+QPushButton:pressed {
+    background-color: rgba(29, 139, 196, 180);
+}
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+QComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    margin-right: 5px;
+}
+QScrollBar:vertical {
+    border: none;
+    background-color: rgba(255, 255, 255, 30);
+    width: 10px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical {
+    background-color: rgba(61, 174, 233, 200);
+    border-radius: 5px;
+    min-height: 20px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QHeaderView::section {
+    background-color: rgba(40, 44, 52, 120);
+    color: white;
+    padding: 5px;
+    border: none;
+    font-weight: bold;
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true">QStackedWidget {
+    background-image: url(:/images/backgroundbis.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+QWidget#page {
+    background-color: transparent;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_title">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: rgba(40, 44, 52, 100);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 70);
+}</string>
+          </property>
+          <property name="text">
+           <string>Gestion des Candidats</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_main">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_left">
+            <item>
+             <widget class="QGroupBox" name="groupBox_form">
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>500</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Informations du candidat</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_id">
+                 <property name="text">
+                  <string>Identifiant :</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="lineEdit_id"/>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_nom">
+                 <property name="text">
+                  <string>Nom :</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="lineEdit_nom"/>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_prenom">
+                 <property name="text">
+                  <string>Prénom :</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLineEdit" name="lineEdit_prenom"/>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_niveau">
+                 <property name="text">
+                  <string>Niveau scolaire :</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QComboBox" name="comboBox_niveau">
+                 <item>
+                  <property name="text">
+                   <string>Bac</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Bac+2</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Licence</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Master</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_date">
+                 <property name="text">
+                  <string>Date de naissance :</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QDateEdit" name="dateEdit_naissance"/>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="label_email">
+                 <property name="text">
+                  <string>Email :</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QLineEdit" name="lineEdit_email"/>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="label_sexe">
+                 <property name="text">
+                  <string>Sexe :</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout_sexe">
+                 <item>
+                  <widget class="QRadioButton" name="radioButton_homme">
+                   <property name="text">
+                    <string>Homme</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="radioButton_femme">
+                   <property name="text">
+                    <string>Femme</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_buttons">
+              <item>
+               <widget class="QPushButton" name="pushButton_ajouter">
+                <property name="text">
+                 <string>Ajouter</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_supprimer">
+                <property name="text">
+                 <string>Supprimer</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="tableWidget">
+            <property name="minimumSize">
+             <size>
+              <width>600</width>
+              <height>0</height>
+             </size>
+            </property>
+            <column>
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Nom</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Prénom</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Niveau</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Date naiss.</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Email</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Sexe</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1161</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
