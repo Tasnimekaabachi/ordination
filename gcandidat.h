@@ -30,7 +30,7 @@ private slots:
     void on_pushButton_supprimer_clicked();
     void on_tableWidget_itemClicked(QTableWidgetItem *item);
 
-    void on_tableWidget_cellActivated(int row, int column);
+    void on_tableWidget_cellActivated(int row, int column); tt
 
 private:
     Ui::GCANDIDAT *ui;
